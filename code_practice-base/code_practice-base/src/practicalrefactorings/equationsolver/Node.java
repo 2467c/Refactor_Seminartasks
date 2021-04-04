@@ -5,6 +5,13 @@
  */
 package practicalrefactorings.equationsolver;
 
+import static java.lang.String.valueOf;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author SHELDON
+ */
 public class Node implements Evaluable {
 
 	private boolean isNumber;
@@ -13,33 +20,47 @@ public class Node implements Evaluable {
 	private Node left;
 	private Node right;
 
-	/** Construct number node */
+	/** Construct number node
+     * @param value */
 	public Node(int value) {
 		this.isNumber = true;
 		this.value = value;
 	}
 
-	/** Construc operator node */
+	/** Construc operator node
+     * @param symbol */
 	public Node(char symbol) {
 		this.isNumber = false;
 		this.operator = symbol;
 	}
 
-	public boolean hasLeft() {
+    /**
+     *
+     * @return
+     */
+    public boolean hasLeft() {
 		if (isNumber) {
 			throw new IllegalStateException("Numbers dont have children");
 		}
 		return left != null;
 	}
 
-	public void setLeft(Node left) {
+    /**
+     *
+     * @param left
+     */
+    public void setLeft(Node left) {
 		if (isNumber) {
 			throw new IllegalStateException("Numbers dont have children");
 		}
 		this.left = left;
 	}
 
-	public void setRight(Node right) {
+    /**
+     *
+     * @param right
+     */
+    public void setRight(Node right) {
 		if (isNumber) {
 			throw new IllegalStateException("Numbers dont have children");
 		}
@@ -69,10 +90,11 @@ public class Node implements Evaluable {
 	@Override
 	public String representation() {
 		if (isNumber) {
-			return String.valueOf(value);
+			return valueOf(value);
 		} else {
 			return "(" + left.representation() + " " + operator + " " + right.representation() + ")";
 		}
 	}
+    private static final Logger LOG = Logger.getLogger(Node.class.getName());
 
 }
