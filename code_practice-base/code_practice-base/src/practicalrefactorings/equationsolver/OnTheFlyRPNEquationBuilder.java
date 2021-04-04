@@ -5,16 +5,27 @@
  */
 package practicalrefactorings.equationsolver;
 
+import static java.lang.Integer.parseInt;
 import java.util.Stack;
+import java.util.logging.Logger;
 
+/**
+ *
+ * @author kunal
+ */
 public class OnTheFlyRPNEquationBuilder implements RPNEquationBuilder {
 
-	private Stack<Node> stack = new Stack<>();
+	private final Stack<Node> stack = new Stack<>();
 
-	@Override
+    /**
+     *
+     * @param token
+     * @return
+     */
+    @Override
 	public RPNEquationBuilder push(String token) {
 		try {
-			int value = Integer.parseInt(token);
+			int value = parseInt(token);
 			Node number = new Node(value);
 			stack.push(number);
 		} catch (NumberFormatException e) {
@@ -39,12 +50,17 @@ public class OnTheFlyRPNEquationBuilder implements RPNEquationBuilder {
 		return this;
 	}
 
-	@Override
+    /**
+     *
+     * @return
+     */
+    @Override
 	public Evaluable build() {
 		if (stack.size() != 1) {
 			throw new IllegalStateException("More than one token left on the stack, unbalanced input.");
 		}
 		return stack.pop();
 	}
+    private static final Logger LOG = Logger.getLogger(OnTheFlyRPNEquationBuilder.class.getName());
 
 }
