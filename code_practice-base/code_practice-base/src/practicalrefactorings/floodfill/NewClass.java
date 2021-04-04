@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author SHELDON
  */
-public abstract class NewClass {
+public abstract class NewClass implements NewInterface {
     
     public abstract Grid<Color> fillAt(Grid<Color> original, int startX, int startY, Color color);
     

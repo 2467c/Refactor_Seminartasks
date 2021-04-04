@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  *
  * @author SHELDON
  */
-public class Floodfill extends NewClass implements NewInterface {
+public class Floodfill extends NewClass {
 
     /**
      *
