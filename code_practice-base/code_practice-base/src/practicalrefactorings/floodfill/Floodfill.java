@@ -12,8 +12,20 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ *
+ * @author SHELDON
+ */
 public class Floodfill extends NewClass implements NewInterface {
 
+    /**
+     *
+     * @param original
+     * @param startX
+     * @param startY
+     * @param color
+     * @return
+     */
     @Override
 	public Grid<Color> fillAt(Grid<Color> original, int startX, int startY, Color color) {
 		Position start = new Position(startX, startY);
