@@ -38,14 +38,12 @@ public class Floodfill {
 								new Position(at.x(), at.y() - 1)
 						);
 						Collection<Position> uncoloredNeighbors = new ArrayList<>();
-						for (Position position : neighbors) {
-							if (position.x() >= 0 && position.x() < copy.width() && position.y() >= 0 && position.y() < copy.height()) {
-								Color colorAtPosition = copy.get(position.x(), position.y());
-								if (colorAtPosition.equals(replacingColor)) {
-									uncoloredNeighbors.add(position);
-								}
-							}
-						}
+                                                neighbors.stream().filter(position -> (position.x() >= 0 && position.x() < copy.width() && position.y() >= 0 && position.y() < copy.height())).forEachOrdered(position -> {
+                                                    Color colorAtPosition = copy.get(position.x(), position.y());
+                                                if (colorAtPosition.equals(replacingColor)) {
+                                                    uncoloredNeighbors.add(position);
+                                                }
+                                            });
 
 						left.addAll(uncoloredNeighbors);
 					}
