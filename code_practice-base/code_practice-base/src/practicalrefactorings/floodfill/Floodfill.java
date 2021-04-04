@@ -12,8 +12,9 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Floodfill {
+public class Floodfill extends NewClass implements NewInterface {
 
+    @Override
 	public Grid<Color> fillAt(Grid<Color> original, int startX, int startY, Color color) {
 		Position start = new Position(startX, startY);
 		if (start.x() >= 0 && start.x() < original.width() && start.y() >= 0 && start.y() < original.height()) {
