@@ -11,6 +11,7 @@ import static java.util.Arrays.asList;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.logging.Logger;
 
 public class Floodfill {
 
@@ -54,4 +55,5 @@ public class Floodfill {
 			throw new IndexOutOfBoundsException("Got " + new Position(startX, startY) + " but grid is only " + original.width() + "x" + original.height());
 		}
 	}
+    private static final Logger LOG = Logger.getLogger(Floodfill.class.getName());
 }
