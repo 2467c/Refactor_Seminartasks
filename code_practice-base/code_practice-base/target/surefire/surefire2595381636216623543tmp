@@ -1,0 +1,24 @@
+#surefire
+#Sat Apr 10 12:32:18 CEST 2021
+testClassesDirectory=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\target\\test-classes
+classPathUrl.3=C\:\\Users\\SHELDON\\.m2\\repository\\org\\hamcrest\\hamcrest-core\\1.3\\hamcrest-core-1.3.jar
+classPathUrl.2=C\:\\Users\\SHELDON\\.m2\\repository\\junit\\junit\\4.12\\junit-4.12.jar
+useManifestOnlyJar=true
+classPathUrl.1=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\target\\classes
+reportsDirectory=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\target\\surefire-reports
+classPathUrl.0=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\target\\test-classes
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\test
+requestedTest=practicalrefactorings.floodfill.FloodfillTest,
+surefireClassPathUrl.1=C\:\\Users\\SHELDON\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-api\\2.12.4\\surefire-api-2.12.4.jar
+specificTest0=**/practicalrefactorings/floodfill/FloodfillTest.java
+surefireClassPathUrl.0=C\:\\Users\\SHELDON\\.m2\\repository\\org\\apache\\maven\\surefire\\surefire-junit4\\2.12.4\\surefire-junit4-2.12.4.jar
+runOrder=filesystem
+useSystemClassLoader=true
+isTrimStackTrace=true
+tc.0=practicalrefactorings.floodfill.FloodfillTest
+enableAssertions=true
+failIfNoTests=true
+runStatisticsFile=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base\\.surefire-827D44DA43777D2CBEF4A4F20A25E9A6FFFD71A6
+includes0=**/practicalrefactorings/floodfill/FloodfillTest.java
+childDelegation=false

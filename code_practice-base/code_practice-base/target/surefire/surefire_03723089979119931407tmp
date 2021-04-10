@@ -1,0 +1,12 @@
+#surefire_0
+#Sat Apr 10 12:32:18 CEST 2021
+jpda.listen=true
+maven.ext.class.path=C\:\\Program Files\\NetBeans-12.0\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar
+maven.surefire.debug=-agentlib\:jdwp\=transport\=dt_socket,server\=n,address\=50294
+jpda.address=50294
+file.encoding=UTF-8
+forkMode=once
+test=practicalrefactorings.floodfill.FloodfillTest
+basedir=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base
+user.dir=D\:\\MUNI_2021-2022\\PV_260\\REFACTORING_ASSIGNMENT\\Refactor_Seminartasks\\code_practice-base\\code_practice-base
+localRepository=C\:\\Users\\SHELDON\\.m2\\repository

@@ -7,10 +7,11 @@ package practicalrefactorings.floodfill;
 
 /**
  * Implementation of the Grid using 2D array
+ * @param <T>
  */
 public class ArrayBackedGrid<T> implements Grid<T> {
 
-	private Object[][] backingArray;
+	private final Object[][] backingArray;
 
 	@Override
 	public int width() {
@@ -23,6 +24,8 @@ public class ArrayBackedGrid<T> implements Grid<T> {
 	}
 
 	/**
+     * @param width
+     * @param height
 	 * @throws IllegalArgumentException either of the width and height are <= 0
 	 */
 	public ArrayBackedGrid(int width, int height) {

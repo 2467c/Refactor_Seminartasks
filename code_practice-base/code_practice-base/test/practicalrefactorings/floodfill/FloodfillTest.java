@@ -8,13 +8,34 @@ package practicalrefactorings.floodfill;
 import java.awt.Color;
 import static java.awt.Color.BLACK;
 import static java.awt.Color.WHITE;
+import org.junit.After;
+import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class FloodfillTest {
 
 	private static final Color W = WHITE;
 	private static final Color B = BLACK;
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
 
 	@Test
 	public void testFillSinglePixel() {
@@ -110,5 +131,23 @@ public class FloodfillTest {
 			System.out.println();
 		}
 	}
+
+    /**
+     * Test of fillAt method, of class Floodfill.
+     */
+    @Test
+    public void testFillAt() {
+        System.out.println("fillAt");
+        Grid<Color> original = null;
+        int startX = 0;
+        int startY = 0;
+        Color color = null;
+        Floodfill instance = new Floodfill();
+        Grid<Color> expResult = null;
+        Grid<Color> result = instance.fillAt(original, startX, startY, color);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 
 }
